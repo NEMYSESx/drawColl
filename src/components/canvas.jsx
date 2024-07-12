@@ -9,7 +9,7 @@ const Canvas = () => {
   const [color, setColor] = useState("#000000");
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:8000");
+    const socket = new WebSocket("wss://drawcoll-bk.onrender.com");
     socket.onopen = () => {
       console.log("WebSocket connection established");
       setWs(socket);
